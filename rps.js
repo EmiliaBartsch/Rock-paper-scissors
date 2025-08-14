@@ -1,11 +1,10 @@
 let result='';
-let score= {
+
+let score = JSON.parse(localStorage.getItem('score')) || {
   wins: 0,
   losses: 0,
   ties: 0
 };
-
-score = JSON.parse(localStorage.getItem('score'));
 
 
 document.querySelector('.score').innerHTML =`Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
@@ -45,3 +44,4 @@ function play(pick) {
 
   return computerMove;
 }
+
